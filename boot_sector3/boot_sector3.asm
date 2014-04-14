@@ -2,11 +2,6 @@
 ;	A 512-byte boot sector that prints "Hello, World!" using a defined function
 ;	Author: William Woodruff
 
-print:
-	mov ah, 0x0e
-	int 0x10
-	ret
-
 mov al, 'H'
 call print
 mov al, 'e'
@@ -36,3 +31,8 @@ jmp $
 
 times 510-($-$$) db 0
 dw 0xaa55
+
+print:
+	mov ah, 0x0e
+	int 0x10
+	ret
