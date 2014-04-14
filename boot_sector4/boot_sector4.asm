@@ -27,5 +27,5 @@ print_string:
 HELLO_WORLD_MSG:
 	db 'Hello, World!', 0 ; null terminated string
 
-times 510-($-$$) db 0 ; paddding
+times 510-($-$$) db 0 ; padding
 dw 0xaa55
