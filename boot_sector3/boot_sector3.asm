@@ -3,39 +3,37 @@
 ;	DOES NOT WORK
 ;	Author: William Woodruff
 
-print:
+print_special:
 	pusha
 	mov ah, 0x0e
 	int 0x10
 	popa
 	ret
 
-mov ah, 0x0e
-
 mov al, 'H'
-call print
+call print_special
 mov al, 'e'
-call print
+call print_special
 mov al, 'l'
-call print
+call print_special
 mov al, 'l'
-call print
+call print_special
 mov al, 'o'
-call print
+call print_special
 mov al, ','
-call print
+call print_special
 mov al, 'W'
-call print
+call print_special
 mov al, 'o'
-call print
+call print_special
 mov al, 'r'
-call print
+call print_special
 mov al, 'l'
-call print
+call print_special
 mov al, 'd'
-call print
+call print_special
 mov al, '!'
-call print
+call print_special
 
 jmp $
 
