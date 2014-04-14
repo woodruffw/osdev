@@ -10,6 +10,8 @@ print:
 	popa
 	ret
 
+mov ah, 0x0e
+
 mov al, 'H'
 call print
 mov al, 'e'
