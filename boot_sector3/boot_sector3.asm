@@ -1,5 +1,6 @@
 ;	boot_sector3.asm
 ;	A 512-byte boot sector that prints "Hello, World!" using a defined function
+;	DOES NOT WORK
 ;	Author: William Woodruff
 
 mov al, 'H'
@@ -33,6 +34,8 @@ times 510-($-$$) db 0
 dw 0xaa55
 
 print:
+	pusha
 	mov ah, 0x0e
 	int 0x10
+	popa
 	ret
