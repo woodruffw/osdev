@@ -3,7 +3,10 @@
 ;	DOES NOT WORK
 ;	Author: William Woodruff
 
-print_special:
+[BITS 16]
+[org 0x7c00]
+
+print:
 	pusha
 	mov ah, 0x0e
 	int 0x10
@@ -11,29 +14,29 @@ print_special:
 	ret
 
 mov al, 'H'
-call print_special
+call print
 mov al, 'e'
-call print_special
+call print
 mov al, 'l'
-call print_special
+call print
 mov al, 'l'
-call print_special
+call print
 mov al, 'o'
-call print_special
+call print
 mov al, ','
-call print_special
+call print
 mov al, 'W'
-call print_special
+call print
 mov al, 'o'
-call print_special
+call print
 mov al, 'r'
-call print_special
+call print
 mov al, 'l'
-call print_special
+call print
 mov al, 'd'
-call print_special
+call print
 mov al, '!'
-call print_special
+call print
 
 jmp $
 
