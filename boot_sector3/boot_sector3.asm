@@ -3,6 +3,13 @@
 ;	DOES NOT WORK
 ;	Author: William Woodruff
 
+print:
+	pusha
+	mov ah, 0x0e
+	int 0x10
+	popa
+	ret
+
 mov al, 'H'
 call print
 mov al, 'e'
@@ -32,10 +39,3 @@ jmp $
 
 times 510-($-$$) db 0
 dw 0xaa55
-
-print:
-	pusha
-	mov ah, 0x0e
-	int 0x10
-	popa
-	ret
