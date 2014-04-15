@@ -19,7 +19,6 @@ jne echo
 jmp $ ; hang
 
 print_string:
-	pusha
 	mov ah, 0x0e ; output
 	.next:
 		mov al, [si] ; load a byte from si
@@ -29,7 +28,6 @@ print_string:
 		int 0x10
 		jmp .next
 	.done:
-		popa
 		ret
 
 MSG1:

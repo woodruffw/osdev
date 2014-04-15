@@ -25,7 +25,6 @@ jmp $ ; hang
 
 ; args: DH - sectors, ES:BX - address range, DL - drive
 load_disk:
-	pusha
 	push dx
 	mov ah, 0x02 
 	mov al, dh
@@ -39,7 +38,6 @@ load_disk:
 	pop dx
 	cmp dh, al
 	jne read_error
-	popa
 	ret
 
 read_error:
