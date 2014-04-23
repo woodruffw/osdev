@@ -21,7 +21,7 @@ int 0x10
 
 jmp $ ; hang
 
-%include "../include/print_string.asm"
+%include "../include/print_string_bios.asm"
 
 ; args: DH - sectors, ES:BX - address range, DL - drive
 load_disk:
@@ -42,7 +42,7 @@ load_disk:
 
 read_error:
 	mov si, DISK_ERROR_MSG
-	call print_string
+	call print_string_bios
 	jmp $ ; hang
 
 BOOT_DRIVE: db 0

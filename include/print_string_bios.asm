@@ -1,7 +1,8 @@
-;	print_string
+;	print_string_bios
 ;	prints a null-terminated string pointed to by the si register
 ;	IMPORTANT: string MUST be null-terminated
-print_string:
+[bits 32]
+print_string_bios:
 	mov ah, 0x0e
 	.next:
 		mov al, [si]
