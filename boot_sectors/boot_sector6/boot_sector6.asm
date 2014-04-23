@@ -21,7 +21,7 @@ int 0x10
 
 jmp $ ; hang
 
-%include "../include/print_string_bios.asm"
+%include "../../include/print_string_bios.asm"
 
 ; args: DH - sectors, ES:BX - address range, DL - drive
 load_disk:

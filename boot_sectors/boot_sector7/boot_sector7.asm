@@ -12,9 +12,9 @@ call enter_pm
 
 jmp $ ; this statement is never reached, as enter_pm calls BEGIN_PM
 
-%include "../include/global_descriptor_table.asm"
-%include "../include/enter_protected_mode.asm"
-%include "../include/print_string_vga.asm"
+%include "../../include/global_descriptor_table.asm"
+%include "../../include/enter_protected_mode.asm"
+%include "../../include/print_string_vga.asm"
 
 [bits 32]
 

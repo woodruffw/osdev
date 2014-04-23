@@ -11,17 +11,19 @@ print_string_vga:
 	pusha
 	mov edx, VIDEO_MEMORY
 
-	loop:
+	.next:
 		mov al, [ebx]
 		mov ah, WHITE_ON_BLACK
 
 		cmp al, 0
-		je done
+		je .done
 
 		mov [edx], ax
-		inc ebx
+		add ebx, 1
 		add edx, 2
 
-	done:
+		jmp .next
+
+	.done:
 		popa
 		ret
